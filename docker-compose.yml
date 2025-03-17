@@ -1,0 +1,11 @@
+services:
+  frontend:
+    image: frontend-app
+    container_name: react-app
+    build:
+      context: ./frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
